@@ -5,6 +5,10 @@ response.sendRedirect("login.jsp");
 %>
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +17,14 @@ response.sendRedirect("login.jsp");
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
+	
+
 <title>The Jobs Online Appointment Scheduling</title>
+
+
+<link rel="stylesheet" href="css/apform.css">
+
+
 
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
@@ -46,12 +57,12 @@ response.sendRedirect("login.jsp");
 				<ul class="navbar-nav ms-auto">
 					
 					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="About.jsp">About</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="Contact.jsp">Contact</a></li>
 
 					<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="logout">Logout <%= session.getAttribute("name")%></a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="logout">Logout - <%= session.getAttribute("name")%></a></li>
 					
 				</ul>
 			</div>
@@ -75,6 +86,67 @@ response.sendRedirect("login.jsp");
 				make your dreams come true</p>
 		</div>
 	</header>
+
+	
+	<!-- Appointment form -->
+		<section class="signup">
+			<div class="container">
+				<div class="signup-content">
+					<div class="signup-form">
+						<h2 class="form-title">Appointment Form</h2>
+					
+						<form method="POST" action="appointment" class="register-form"
+							id="register-form">
+							<div class="form-group">
+								<label for="name"><i
+									class="zmdi zmdi-account material-icons-name"></i></label> <input
+									type="text" name="type_of_job" id="type_of_job" placeholder="type of job" />
+							</div>
+                                                    
+                                                        <div class="form-group">
+								<label for="desire_country"><i class="zmdi zmdi-email"></i></label> <input
+									type="text" name="desire_country" id="desire_country" placeholder="desire country" />
+							</div>
+                                                    
+                                                        <div class="form-group">
+								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
+									type="text" name="Passport_no" id="Passport_no" placeholder="your Passport no" />
+							</div>
+                                    
+                                    <div class="form-group">
+								<label for="address"><i class="zmdi zmdi-lock-outline"></i></label>
+								<input type="text" name="address" id="address"
+									placeholder="your address" />
+							</div>
+                                                    
+                                                    	<div class="form-group">
+								<label for="contact_no"><i class="zmdi zmdi-lock-outline"></i></label>
+								<input type="text" name="contact_no" id="contact_no"
+									placeholder="your contact no" />
+							</div>                                    
+							
+							    <div class="form-group">
+								<label for="date"><i class="zmdi zmdi-lock-outline"></i></label>
+								<input type="date" name="date" id="date"
+									placeholder="select a date" />
+							</div>
+							
+							 <div class="form-group">
+								<label for="time"><i class="zmdi zmdi-lock-outline"></i></label>
+								<input type="time" name="time" id="time"
+									placeholder="select a time" />
+							</div>
+							               													
+							<div class="form-group form-button">
+								<input type="submit" name="submit" id="submit"
+									class="form-submit" value="submit" />
+							</div>
+						</form>
+					</div>
+				
+				</div>
+			</div>
+		</section>
 	
 	
 	
@@ -108,5 +180,15 @@ response.sendRedirect("login.jsp");
 
 	<script src="js/scripts.js"></script>
 	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="alert/dist/sweetalert.css">
+	<script type="text/javascript">
+            
+            var status = document.getElementById("status").value;
+            if(status==="success"){
+                swal("Appointment created successfully", "success");   
+            }
+            </script>
+	
 </body>
 </html>
