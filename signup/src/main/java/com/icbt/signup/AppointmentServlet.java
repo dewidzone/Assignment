@@ -25,30 +25,29 @@ public class AppointmentServlet extends HttpServlet {
 
 		   String type_of_job = request.getParameter("type_of_job");
 	       String desire_country = request.getParameter("desire_country");
-	       String passport_no = request.getParameter("Passport_no");
+	       int passport_no = Integer.parseInt(request.getParameter("Passport_no"));
 	       String address = request.getParameter("address");
-	       String contact_no = request.getParameter("contact_no");
+	       int contact_no = Integer.parseInt(request.getParameter("contact_no"));
 	       String date = request.getParameter("date");
-	       String time = request.getParameter("time");
+	       
 	         
 	       RequestDispatcher dispatcher = null;
-	       Connection con = null;
+	       Connection conn = null;
 	        
 	        try{
 	            Class.forName("com.mysql.jdbc.Driver"); 
-	            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/icbt", "root","root");
-	            PreparedStatement pst = con
+	            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/icbt", "root","root");
+	            PreparedStatement pst = conn
 	                    .prepareStatement("insert into appointment(type_of_job, desire_country, passport_no, address, contact_no, date, time) values(?,?,?,?,?,?,?) ");
 	            pst.setString(1, type_of_job);
 	            pst.setString(2, desire_country);
-	            pst.setString(3, passport_no);
+	            pst.setLong(3, passport_no);
 	            pst.setString(4, address);
-	            pst.setString(5, contact_no);
+	            pst.setLong(5, contact_no);
 	            pst.setString(6, date);
-	            pst.setString(7, time);
 	            
 	            int rowCount = pst.executeUpdate();
-	            dispatcher = request.getRequestDispatcher("index.jsp");
+	            dispatcher = request.getRequestDispatcher("about.jsp");
 	            if (rowCount > 0) {
 	                request.setAttribute("status", "success");
 	            } else{
@@ -59,10 +58,11 @@ public class AppointmentServlet extends HttpServlet {
 	        System.out.print(e);
 	    } finally {
 	           try {
-	               con.close();
+	               conn.close();
 	           } catch (SQLException e) {
 	               System.out.print(e);
 	           }
 	                }
-	    }
+	}
 }
+	          

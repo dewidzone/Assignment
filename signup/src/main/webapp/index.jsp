@@ -130,11 +130,6 @@ response.sendRedirect("login.jsp");
 									placeholder="select a date" />
 							</div>
 							
-							 <div class="form-group">
-								<label for="time"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="time" name="time" id="time" required=""
-									placeholder="select a time" />
-							</div>
 							               													
 							<div class="form-group form-button">
 								<input type="submit" name="submit" id="submit"
