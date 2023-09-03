@@ -29,28 +29,28 @@
 							<div class="form-group">
 								<label for="name"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="name" id="name" placeholder="Your Name" />
+									type="text" name="name" id="name" required="" placeholder="Your Name" />
 							</div>
                                                     
                                                         <div class="form-group">
 								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
-									type="email" name="email" id="email" placeholder="Your Email" />
+									type="email" name="email" id="email" required="" placeholder="Your Email" />
 							</div>
                                                     
                                                         <div class="form-group">
 								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
-									type="password" name="password" id="password" placeholder="Password" />
+									type="password" name="password" id="password" required="" placeholder="Password" />
 							</div>
                                                     
                                                     	<div class="form-group">
 								<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="password" name="re_pass" id="re_pass"
+								<input type="password" name="re_pass" id="re_pass" required=""
 									placeholder="Repeat your password" />
 							</div>                                                   													
 						
 							<div class="form-group">
-								<label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="text" name="contact" id="contact"
+								<label for="contact"><i class="zmdi:phone"></i></label>
+								<input type="text" name="contact" id="contact" maxlength="10" required=""
 									placeholder="Contact no" />
 							</div>
 							<div class="form-group">
@@ -83,9 +83,8 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" href="alert/dist/sweetalert.css">
-
         <script type="text/javascript">
+        
             
             var status = document.getElementById("status").value;
             if(status==="success"){

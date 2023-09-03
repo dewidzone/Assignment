@@ -24,23 +24,22 @@ response.sendRedirect("login.jsp");
 
 <link rel="stylesheet" href="css/apform.css">
 
-
-
+<!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-
+<!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
 	crossorigin="anonymous"></script>
-
+<!-- Google fonts-->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
 	rel="stylesheet" type="text/css" />
 <link
 	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
 	rel="stylesheet" type="text/css" />
-
+<!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/index-styles.css" rel="stylesheet" />
 </head>
 <body id="page-top">
-
+ <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
 	<nav
 		class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
 		id="mainNav">
@@ -100,40 +99,40 @@ response.sendRedirect("login.jsp");
 							<div class="form-group">
 								<label for="name"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="type_of_job" id="type_of_job" placeholder="type of job" />
+									type="text" name="type_of_job" id="type_of_job" required="" placeholder="type of job" />
 							</div>
                                                     
                                                         <div class="form-group">
 								<label for="desire_country"><i class="zmdi zmdi-email"></i></label> <input
-									type="text" name="desire_country" id="desire_country" placeholder="desire country" />
+									type="text" name="desire_country" id="desire_country" required="" placeholder="desire country" />
 							</div>
                                                     
                                                         <div class="form-group">
 								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
-									type="text" name="Passport_no" id="Passport_no" placeholder="your Passport no" />
+									type="text" name="Passport_no" id="Passport_no" required="" placeholder="your Passport no" />
 							</div>
                                     
                                     <div class="form-group">
 								<label for="address"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="text" name="address" id="address"
+								<input type="text" name="address" id="address" required=""
 									placeholder="your address" />
 							</div>
                                                     
                                                     	<div class="form-group">
 								<label for="contact_no"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="text" name="contact_no" id="contact_no"
+								<input type="text" name="contact_no" id="contact_no" maxlength="10" required=""
 									placeholder="your contact no" />
 							</div>                                    
 							
 							    <div class="form-group">
 								<label for="date"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="date" name="date" id="date"
+								<input type="date" name="date" id="date" required=""
 									placeholder="select a date" />
 							</div>
 							
 							 <div class="form-group">
 								<label for="time"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="time" name="time" id="time"
+								<input type="time" name="time" id="time" required=""
 									placeholder="select a time" />
 							</div>
 							               													
@@ -181,7 +180,6 @@ response.sendRedirect("login.jsp");
 	<script src="js/scripts.js"></script>
 	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" href="alert/dist/sweetalert.css">
 	<script type="text/javascript">
             
             var status = document.getElementById("status").value;
