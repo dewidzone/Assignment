@@ -56,6 +56,9 @@ response.sendRedirect("login.jsp");
 				<ul class="navbar-nav ms-auto">
 					
 					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="About.jsp">Make Appointment
+						</a></li>
+					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="About.jsp">About</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="Contact.jsp">Contact</a></li>
@@ -86,61 +89,7 @@ response.sendRedirect("login.jsp");
 		</div>
 	</header>
 
-	
-	<!-- Appointment form -->
-		<section class="signup">
-			<div class="container">
-				<div class="signup-content">
-					<div class="signup-form">
-						<h2 class="form-title">Appointment Form</h2>
-					
-						<form method="POST" action="appointment" class="register-form"
-							id="register-form">
-							<div class="form-group">
-								<label for="name"><i
-									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="type_of_job" id="type_of_job" required="" placeholder="type of job" />
-							</div>
-                                                    
-                                                        <div class="form-group">
-								<label for="desire_country"><i class="zmdi zmdi-email"></i></label> <input
-									type="text" name="desire_country" id="desire_country" required="" placeholder="desire country" />
-							</div>
-                                                    
-                                                        <div class="form-group">
-								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
-									type="text" name="Passport_no" id="Passport_no" required="" placeholder="your Passport no" />
-							</div>
-                                    
-                                    <div class="form-group">
-								<label for="address"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="text" name="address" id="address" required=""
-									placeholder="your address" />
-							</div>
-                                                    
-                                                    	<div class="form-group">
-								<label for="contact_no"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="text" name="contact_no" id="contact_no" maxlength="10" required=""
-									placeholder="your contact no" />
-							</div>                                    
-							
-							    <div class="form-group">
-								<label for="date"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="date" name="date" id="date" required=""
-									placeholder="select a date" />
-							</div>
-							
-							               													
-							<div class="form-group form-button">
-								<input type="submit" name="submit" id="submit"
-									class="form-submit" value="submit" />
-							</div>
-						</form>
-					</div>
-				
-				</div>
-			</div>
-		</section>
+
 	
 	
 	

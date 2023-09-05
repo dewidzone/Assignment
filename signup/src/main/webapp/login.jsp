@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+
 	<div class="main">
 
 		<!-- Sing in  Form -->
@@ -55,6 +55,9 @@
 								<input type="submit" name="signin" id="signin"
 									class="form-submit" value="Log in" />
 							</div>
+							
+						
+							
 						</form>
 						
 					</div>
