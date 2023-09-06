@@ -1,5 +1,8 @@
-
-
+<%
+if(session.getAttribute("uname")==null){
+response.sendRedirect("loginadmin.jsp");
+}
+%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -8,18 +11,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-
-<!-- Font Awesome icons (free version)-->
-<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-	crossorigin="anonymous"></script>
-<!-- Google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-	rel="stylesheet" type="text/css" />
-<link
-	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
-	rel="stylesheet" type="text/css" />
-<!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/index-styles.css" rel="stylesheet" />
 
     <style>
 
@@ -77,7 +68,7 @@ body {
 
 <body>
 
-  <nav
+   	<nav
 		class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
 		id="mainNav">
 		<div class="container">
@@ -87,7 +78,7 @@ body {
 				type="button" data-bs-toggle="collapse"
 				data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
 				aria-expanded="false" aria-label="Toggle navigation">
-				Menu <i class="fas fa-bars"></i>
+				 <i class="fas fa-bars"></i>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ms-auto">
@@ -97,21 +88,42 @@ body {
 						</a></li>
 
 					<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="adminlogout">Logout - <%= session.getAttribute("username")%></a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="adminlogout">Logout - <%= session.getAttribute("uname")%></a></li>
 					
 				</ul>
 			</div>
 		</div>
 	</nav>
-    
-<div class="home-container">
+   
+	<header>
+	<div class="home-container">
 				<div class="center">
-				<h1>The Jobs</h1><br><br>
+				<h1>More Info</h1><br><br>
 				
-				<p>Welcome to the Job Advice Center, your dependable advisor on career development and employment.</p><br><br>
+				<p>The Jobs is a leading consultation center in Colombo that 
+				provides free consultation services to job seekers who are planning to go abroad for jobs. 
+				We have a team of experienced and qualified job consultants who are specialized on different 
+				countries and the type of jobs on which the job seekers need advice.</p><br><br>
 				
+<p>Our consultants are working on a part-time basis, so you can easily schedule an appointment with them that fits your schedule. 
+We also have a web-based system that allows you to schedule appointments online.
+We understand that finding a job abroad can be a daunting task, but we are here to help you every step of the way. We will provide you with the guidance and support you need to find the right job for you.</p><br><br>
 
-        </div>
+<p>Here are some of the services we offer:<br>
+
+Career counseling<br>
+Resume writing assistance<br>
+Interviewing skills training<br>
+Networking assistance<br>
+Job placement<br><br>
+
+We are committed to helping you achieve your career goals. We believe that everyone deserves to have a great job, and we are here to help you make that happen.
+
+</p>
+
+</div><br><br>
+        
+   </header>     
 
 
 </div>

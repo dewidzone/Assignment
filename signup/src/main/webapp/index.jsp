@@ -56,12 +56,11 @@ response.sendRedirect("login.jsp");
 				<ul class="navbar-nav ms-auto">
 					
 					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="About.jsp">Make Appointment
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="appointment_form.jsp">Make Appointment
 						</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="About.jsp">About</a></li>
-					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="Contact.jsp">Contact</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="aboutus.jsp">About</a></li>
+					
 
 					<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="logout">Logout - <%= session.getAttribute("name")%></a></li>

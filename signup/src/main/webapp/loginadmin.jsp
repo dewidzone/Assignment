@@ -15,7 +15,7 @@
 }
 
 body {
-    background-image: url('b3.png');
+    background-color: #9fa8c7;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -83,14 +83,14 @@ button:hover {
 <body>
     <div class="login-container">
         <div class="login-header">
-            <h1>Administration Login</h1><br>
+            <h1>Admin Login</h1><br>
         </div>
-        <form action="AdminLogin" method="post" class="login-form">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required><br>
+        <form action="adminServlet" method="post" class="login-form">
+            <input type="text" name="uname" placeholder="Username" required>
+            <input type="password" name="upassword" placeholder="Password" required><br>
             <button type="submit">Login</button><br>
         </form>
-            <form action="home.jsp">
+            <form action="login.jsp">
         <button type="submit"><b>Back</b></button>
     </form><br> 
     
@@ -104,5 +104,5 @@ button:hover {
     
  </div>
 
-</body> 
+</body> 
 </html>

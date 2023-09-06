@@ -1,4 +1,4 @@
-package com.icbt.admin;
+package com.icbt.signup;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,23 +6,26 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-/**
- * Servlet implementation class AdminLogout
- */
-@WebServlet("/adminlogout")
-public class AdminLogout extends HttpServlet {
+
+@WebServlet("/AboutServlet")
+public class AboutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-   
+
+    public AboutServlet() {
+        super();
+      
+    }
+
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		  request.getRequestDispatcher("aboutpage.jsp").forward(request, response);
+
 		
-		HttpSession session = request.getSession();
-		session.invalidate();
-		response.sendRedirect("loginadmin.jsp");
-		
+	
+
+
 	}
 
 }
-
