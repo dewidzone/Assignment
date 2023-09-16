@@ -5,131 +5,105 @@ response.sendRedirect("login.jsp");
 %>
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-	
 
 <title>The Jobs Online Appointment Scheduling</title>
 
+<style>
+    /* Define the styles for the navigation bar */
+    .navbar {
+        background-color: tomato;
+        overflow: hidden;
+    }
 
-<link rel="stylesheet" href="css/apform.css">
+    /* Style the navigation bar links */
+    .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
 
-<!-- Favicon-->
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-<!-- Font Awesome icons (free version)-->
-<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-	crossorigin="anonymous"></script>
-<!-- Google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-	rel="stylesheet" type="text/css" />
-<link
-	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
-	rel="stylesheet" type="text/css" />
-<!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/index-styles.css" rel="stylesheet" />
+    /* Change color on hover */
+    .navbar a:hover {
+        background-color: darkred;
+    }
+
+    /* Style the main container */
+    .container {
+        background-image: url('background.jpg'); /* Add your background image URL here */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: Arial, sans-serif; /* Specify your desired font-family */
+        color: #333; /* Text color */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Style the headings and paragraphs within the container */
+    .container h1 {
+        color: black; /* Heading color */
+    }
+
+    .container p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 20px;
+    }
+</style>
 </head>
 <body id="page-top">
- <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
-	<nav
-		class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
-		id="mainNav">
-		<div class="container">
-			<a class="navbar-brand" href="#page-top">The Jobs </a>
-			<button
-				class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
-				type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-				aria-expanded="false" aria-label="Toggle navigation">
-				Menu <i class="fas fa-bars"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ms-auto">
-					
-					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="appointment_form.jsp">Make Appointment
-						</a></li>
-					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="aboutus.jsp">About</a></li>
-					
+<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+<div class="navbar">
+    <a href="index.jsp">Home</a>
+    <a href="add_appointment.jsp">Appointment</a>
+    <a href="aboutus.jsp">About</a>
+    <a href="logout">Logout - <%= session.getAttribute("name")%></a>
+</div>
 
-					<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="logout">Logout - <%= session.getAttribute("name")%></a></li>
-					
-				</ul>
-			</div>
-		</div>
-	</nav>
+<!-- Main content container -->
+<div class="container">
+    <h1>Welcome To The Jobs Consultant Service</h1>
+    <p>It's not late to make your dreams come true.</p>
+    <br><br>
+    <p>Our consultants are working on a part-time basis, so you can easily schedule an appointment with them that fits your schedule. We also have a web-based system that allows you to schedule appointments online. We understand that finding a job abroad can be a daunting task, but we are here to help you every step of the way. We will provide you with the guidance and support you need to find the right job for you.</p><br><br>
+    <p>Here are some of the services we offer:<br>
+        Career counseling<br>
+        Resume writing assistance<br>
+        Interviewing skills training<br>
+        Networking assistance<br>
+        Job placement<br><br>
+    We are committed to helping you achieve your career goals. We believe that everyone deserves to have a great job, and we are here to help you make that happen.
+    </p>
+</div>
 
-	<header class="masthead bg-primary text-white text-center">
-		<div class="container d-flex align-items-center flex-column">
-		
-			<h1 class="masthead-heading text-uppercase mb-0">Welcome To The Jobs Consultant Service</h1>
-		
-			<div class="divider-custom divider-light">
-				<div class="divider-custom-line"></div>
-				<div class="divider-custom-icon">
-					<i class="fas fa-star"></i>
-				</div>
-				<div class="divider-custom-line"></div>
-			</div>
-			
-			<p class="masthead-subheading font-weight-light mb-0">It's not late to
-				make your dreams come true</p>
-		</div>
-	</header>
+<!-- Footer and scripts go here -->
+<footer class="footer text-center">
+    <!-- Footer content goes here -->
+</footer>
 
-
-	
-	
-	
-	<footer class="footer text-center">
-		<div class="container">
-			<div class="row">
-			
-				<div class="col-lg-4 mb-5 mb-lg-0">
-					<h4 class="text-uppercase mb-4"></h4>
-					<p class="lead mb-0">
-						
-					</p>
-				</div>
-				
-				<div class="col-lg-4">
-					<h4 class="text-uppercase mb-4"></h4>
-					<p class="lead mb-0">
-						
-						
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	
-
-
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-	<script src="js/scripts.js"></script>
-	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<script type="text/javascript">
-            
-            var status = document.getElementById("status").value;
-            if(status==="success"){
-                swal("Appointment created successfully", "success");   
-            }
-            </script>
-	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+    var status = document.getElementById("status").value;
+    if(status==="success"){
+        swal("Appointment created successfully", "success");   
+    }
+</script>
 </body>
 </html>

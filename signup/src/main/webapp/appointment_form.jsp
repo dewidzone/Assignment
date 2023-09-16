@@ -43,39 +43,39 @@
 				</caption>
 
 				<c:if test="${appointment != null}">
-					<input type="hidden" name="id" ${appointment.appointmentID} />
+					<input type="hidden"  name="id" ${appointment.appointmentID} />
 				</c:if>
 
 
 				<fieldset class="form-group">
 					<label>Type of Job</label> <input type="text"
 						${appointment.type_of_job} class="form-control"
-						name="type_of_job">
+						name="type_of_job" required>
 				</fieldset>
 
 				<fieldset class="form-group">
 					<label>Desire Country</label> <input type="text"
 						${appointment.desire_country} class="form-control"
-						name="desire_country">
+						name="desire_country" required>
 				</fieldset>
 				
 					<fieldset class="form-group">
 					<label>Passport No:</label> <input type="text"
 						${appointment.passport_no} class="form-control"
-						name="passport_no">
+						name="passport_no" required>
 				</fieldset>
 				
 				<fieldset class="form-group">
 					<label>Your Address</label> <input type="text"
 					${appointment.address} class="form-control"
-						name="address">
+						name="address" required>
 				</fieldset>
 
 				
 				<fieldset class="form-group">
 					<label>Appointment Date</label> <input type="date"
 						${appointment.date} class="form-control"
-						name="date">
+						name="date" required>
 				</fieldset>
 
 				<button type="submit" class="btn btn-success">Save</button>

@@ -52,38 +52,38 @@
 				<fieldset class="form-group">
 					<label>Employee Name</label> <input type="text"
 						 ${employee.name} class="form-control"
-						name="name" required="required">
+						name="name" required>
 				</fieldset>
 
 				<fieldset class="form-group">
 					<label>Employee Type</label> <input type="text"
 						${employee.type_of_employee} class="form-control"
-						name="type_of_employee">
+						name="type_of_employee" required>
 				</fieldset>
 
 				<fieldset class="form-group">
 					<label>Employee Specialized Country</label> <input type="text"
 						${employee.specialized_country} class="form-control"
-						name="specialized_country">
+						name="specialized_country" required>
 				</fieldset>
 				
 					<fieldset class="form-group">
 					<label>Specialized Type of Job</label> <input type="text"
 						${employee.specialized_type_of_job} class="form-control"
-						name="specialized_type_of_job">
+						name="specialized_type_of_job" required>
 				</fieldset>
 				
 				<fieldset class="form-group">
 					<label>Employee Email</label> <input type="text"
 					${employee.email} class="form-control"
-						name="email">
+						name="email" required>
 				</fieldset>
 
 				
 				<fieldset class="form-group">
 					<label>Employee Address</label> <input type="text"
 						${employee.address} class="form-control"
-						name="address">
+						name="address" required>
 				</fieldset>
 
 				<button type="submit" class="btn btn-success">Save</button>

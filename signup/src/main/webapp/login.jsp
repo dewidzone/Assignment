@@ -15,7 +15,7 @@
 }
 
 body {
-    background-image: url('b3.jpg');
+    background-image: url('background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -111,7 +111,7 @@ button :hover {
 <div class="container">
        
     
-       <form action="loginadmin.jsp"><button class="top-right-button">Admin Login</button> </form>
+       <form action="NewFile.jsp"><button class="top-right-button">Admin Login</button> </form>
     </div><br>
      <div class="login-header">
             <h2>Login Panel </h2><br>
